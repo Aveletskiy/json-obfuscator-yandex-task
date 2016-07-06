@@ -1,0 +1,23 @@
+{
+  "name": "css-obfuscator",
+  "version": "1.0.0",
+  "description": "css obfuscator for yandex tasks",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --reporter spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aveletsky/css-obfuscator.git"
+  },
+  "author": "Aveletsky",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Aveletsky/css-obfuscator/issues"
+  },
+  "homepage": "https://github.com/Aveletsky/css-obfuscator#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.5.3"
+  }
+}
