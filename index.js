@@ -7,8 +7,8 @@
  */
 module.exports = function (data) {
 
-    var freqMassive = {};
-    var sortMassive = [];
+    var freqMassive = {},
+        sortMassive = [];
 
     //makes freq hash
     for (var i = 0; i < data.length; i++) {
@@ -20,5 +20,12 @@ module.exports = function (data) {
             return freqMassive[a]-freqMassive[b]
         });
 
-    return [freqMassive, sortMassive];
+    var resultObject={};
+
+    sortMassive.forEach(function(item,i){
+       resultObject[item]=String.fromCharCode(97 + i);
+    });
+
+
+    return [freqMassive, sortMassive,resultObject];
 };
