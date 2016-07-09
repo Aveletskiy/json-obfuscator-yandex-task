@@ -85,8 +85,5 @@ module.exports = function (data) {
   }
   //endregion
 
-
-
-
   return [frequencyMassive, reversalSortedMassive, reservedLengthForAlias, resultObject];
 };
