@@ -8,7 +8,7 @@ Made for Yandex School task
 
 
 A small library that obfuscate JSON file
-Made for the task by Yandex School
+made for the second task by Alexander Malinovsky for Yandex School 
 
 ## Installation
 
