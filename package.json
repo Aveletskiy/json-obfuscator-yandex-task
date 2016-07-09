@@ -1,11 +1,14 @@
 {
   "name": "css-obfuscator-yandex-task",
   "version": "1.0.2",
+  "bugs": {
+    "url": "https://github.com/Aveletsky/json-obfuscator-yandex-task/issues"
+  },
   "description": "css obfuscator for yandex tasks",
   "main": "index.js",
   "scripts": {
     "test": "mocha --reporter spec",
-    "cover": "F:/Webstorm/css-obfuscator/node_modules/istanbul/lib/cli.js cover F:/Webstorm/css-obfuscator/node_modules/mocha/bin/_mocha -- -R spec test/*"
+    "cover": "istanbul cover _mocha -- -R spec test/*"
   },
   "repository": {
     "type": "git",
