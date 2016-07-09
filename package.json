@@ -1,5 +1,5 @@
 {
-  "name": "css-obfuscator",
+  "name": "css-obfuscator-yandex-task",
   "version": "1.0.0",
   "description": "css obfuscator for yandex tasks",
   "main": "index.js",
