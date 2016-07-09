@@ -1,26 +1,25 @@
-Number Formatter
+JSON Obfuscator [![Build Status](https://travis-ci.org/Aveletsky/css-obfuscator.svg?branch=master)](https://travis-ci.org/Aveletsky/css-obfuscator)
+Made for Yandex School task
 =========
 
-A small library that adds commas to numbers
+A small library that obfuscate JSON file
+Made for the task by Yandex School
 
 ## Installation
 
-  `npm install @jdaudier/number-formatter`
+  `npm install @aveletsky/json-obfuscator-yandex-task`
 
 ## Usage
 
-    var numFormatter = require('@jdaudier/number-formatter');
+    var obfuscator = require('@aveletsky/json-obfuscator-yandex-task');
+    var data = ['asqq', 'qwww', 'asqq', 'vvf', 'vvf', 'vvf', 'gg'];
 
-    var formattedNum = numFormatter(35666);
+    var obfuscatedObject = obfuscator(data);
   
   
-  Output should be `35,666`
+  Output should be `{vvf: 'a', asqq: 'b', gg: 'c', qwww: 'd'}`
 
 
 ## Tests
 
   `npm test`
-
-## Contributing
-
-In lieu of a formal style guide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code.
