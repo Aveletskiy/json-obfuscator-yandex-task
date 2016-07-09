@@ -1,4 +1,6 @@
-JSON Obfuscator [![Build Status](https://travis-ci.org/Aveletsky/css-obfuscator.svg?branch=master)](https://travis-ci.org/Aveletsky/css-obfuscator)
+JSON Obfuscator 
+
+[![Build Status](https://travis-ci.org/Aveletsky/css-obfuscator.svg?branch=master)](https://travis-ci.org/Aveletsky/css-obfuscator)
 Made for Yandex School task
 =========
 
