@@ -19,7 +19,7 @@ module.exports = function (data) {
   });
 
   //sorting and reversing frequencyMassive by frequency
-  var reversalSortedMassive =         // index:'origin key'
+  var reversedSortedMassive =         // index:'origin key'
     Object
       .keys(frequencyMassive)
       .sort(function (a, b) {
@@ -87,50 +87,36 @@ module.exports = function (data) {
   }
   //endregion
 
-  var reservedLengthForAlias = {}; // 'original key':reserved length
-  var maxAliasStringLength = 0;
+  var resultObject = {}; // 'original key':reserved length
 
+  reversedSortedMassive.forEach(
+    function(item,iter){
+      resultObject[item]=dictionaryShort[iter % dictionaryShort.length];
+    }
+  );
 
+  var avablePosions=1;
+  var perms = PermutationsWithRepetition(dictionaryFull, avablePosions);
+  reversedSortedMassive.forEach(
+    function(item,iter){
+      var curGeneratedCombination = perms.next();
+      if(!curGeneratedCombination){
+        avablePosions++;
+        perms = PermutationsWithRepetition(dictionaryFull, avablePosions);
+        curGeneratedCombination = perms.next();
+      }
 
-  //form maxAliasStringLength
-  reversalSortedMassive
-    .forEach(function (item, iterator) {
-      (iterator < dictionaryShort.length)
-        ? reservedLengthForAlias[item] = Math.round(iterator / dictionaryShort.length + 1)
-        : reservedLengthForAlias[item] = Math.round(iterator / dictionaryFull.length + 1);
+      if(iter>dictionaryShort.length){
+        resultObject[item]+=curGeneratedCombination.join('');
+      }
 
-      if (reservedLengthForAlias[item] > maxAliasStringLength)
-        maxAliasStringLength = reservedLengthForAlias[item];
-    });
+    }
 
-  //region construct alias map
-  for (var position = 0; position < maxAliasStringLength; position++) {
-    var chosenDictionary = [];
+  );
 
-    //This makes the first character of an alias in Latin letters
-    (position == 0)
-      ? chosenDictionary = dictionaryShort
-      : chosenDictionary = dictionaryFull;
-
-    var dictionaryPosSelector = position % chosenDictionary.length;
-
-
-    reversalSortedMassive
-      .forEach(function (item) {
-        //push a begin of string into alias value
-        if (!resultObject[item])
-          resultObject[item] = '';
-        //
-        if (reservedLengthForAlias[item] > position) {
-          resultObject[item] += chosenDictionary[dictionaryPosSelector];
-          dictionaryPosSelector++;
-          if (dictionaryPosSelector > chosenDictionary.length)
-            dictionaryPosSelector = 0;
-        }
-      })
-
+  return {
+    freqMassive:frequencyMassive,
+    revSortMassive:reversedSortedMassive,
+    obfuscatedObject:resultObject
   }
-  //endregion
-
-  return [frequencyMassive, reversalSortedMassive, reservedLengthForAlias, resultObject];
 };
