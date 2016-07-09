@@ -1,8 +1,8 @@
 {
   "name": "css-obfuscator-yandex-task",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "bugs": {
-    "url": "https://github.com/Aveletsky/json-obfuscator-yandex-task/issues"
+    "url": "https://github.com/Aveletsky/css-obfuscator/issues"
   },
   "description": "css obfuscator for yandex tasks",
   "main": "index.js",
@@ -16,9 +16,6 @@
   },
   "author": "Aveletsky",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/Aveletsky/css-obfuscator/issues"
-  },
   "homepage": "https://github.com/Aveletsky/css-obfuscator#readme",
   "devDependencies": {
     "chai": "^3.5.0",
