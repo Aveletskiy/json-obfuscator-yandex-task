@@ -4,7 +4,8 @@
   "description": "css obfuscator for yandex tasks",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --reporter spec"
+    "test": "mocha --reporter spec",
+    "cover": "F:/Webstorm/css-obfuscator/node_modules/istanbul/lib/cli.js cover F:/Webstorm/css-obfuscator/node_modules/mocha/bin/_mocha -- -R spec test/*"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,8 @@
   "homepage": "https://github.com/Aveletsky/css-obfuscator#readme",
   "devDependencies": {
     "chai": "^3.5.0",
+    "coveralls": "^2.11.9",
+    "istanbul": "^0.4.4",
     "mocha": "^2.5.3"
   }
 }
