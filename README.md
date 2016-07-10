@@ -12,8 +12,8 @@ made for the second task by Alexander Malinovsky for Yandex School
 
 ## Installation
 
-  `npm i aveletsky/json-obfuscator-yandex-task` -D
-
+  `npm i aveletsky/json-obfuscator-yandex-task -D`
+  
 ## Usage
 
     var obfuscator = require('json-obfuscator-yandex-task');
