@@ -12,11 +12,11 @@ made for the second task by Alexander Malinovsky for Yandex School
 
 ## Installation
 
-  `npm install @aveletsky/json-obfuscator-yandex-task`
+  `npm install aveletsky/json-obfuscator-yandex-task`
 
 ## Usage
 
-    var obfuscator = require('@aveletsky/json-obfuscator-yandex-task');
+    var obfuscator = require('json-obfuscator-yandex-task');
     var data = ['asqq', 'qwww', 'asqq', 'vvf', 'vvf', 'vvf', 'gg'];
 
     var obfuscatedObject = obfuscator(data);
