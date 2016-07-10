@@ -8,7 +8,7 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha --reporter spec",
-    "cover": "istanbul cover _mocha -- -R spec test/*"
+    "cover": "istanbul cover _mocha -- -R spec"
   },
   "repository": {
     "type": "git",

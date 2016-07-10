@@ -1,10 +1,30 @@
 "use strict";
 
 var expect = require('chai').expect;
+var permutation = require('../lib/PermutationsWithRepetition');
 var abfuscator = require('../index');
 
 
 describe('#Obfuscator', function () {
+  //next each rewind
+  it('checking permutation module step by step', function () {
+    var dictinary = ['a', 'b', 'c', 'd', 'e'];  //n
+    var positions = 3;                                    //m
+
+    var perms = permutation(dictinary,positions);
+    var result = perms.next();
+    expect(result).to.deep.equal(['a','a','a']);
+    result = perms.next();
+    expect(result).to.deep.equal(['a','a','b']);
+    perms.rewind();
+    result = perms.next();
+    expect(result).to.deep.equal(['a','a','a']);
+    perms.each(function(v){});
+    result = perms.next();
+    expect(result).to.deep.equal(false);
+  });
+
+
   ///freqArray revSortArray obfuscatedObject
   it('should return frequency Array ', function () {
     var data = ['asqq', 'qwww', 'asqq', 'vvf', 'vvf', 'vvf', 'gg'],
